@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 charset=utf-8" />
+    <!-- Link for the latest compiled and minified Bootstrap stylesheet  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <!-- Script for the latest compiled JavaScript (Bootstrap) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+
+        @media screen and (max-width:1024px) {
+
+        }
+        @media screen and (max-width:720px) {
+
+         }
+         @media screen and (max-width:620px) {
+
+         }
+         @media screen and (max-width:480px) {
+              .h1 {
+                  font-size:28px;
+              }
+         }
+         @media screen and (max-width:320px) {
+              .h1 {
+                  font-size:24px;
+              }
+         }
+    </style>
+</head>
+<body style="background-color:#00ff90">
+    <form id="form1" runat="server">
+        <div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" style="background-color:#808080; height:80px;">
+                        <div class="headBanner" style="font-family:Arial; text-align:center; padding: 5px 5px 5px 5px;">
+                              <h1 class="h1">WEBSITE HEADER</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" style="height:70px; background-color:#000000;">
+                        <div class="navMenu" style="font-family:Arial; color:#ffffff; text-align:center; padding: 5px 5px 5px 5px;">
+                            <h3>NAV MENU</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <div class="contentPane" style="min-height:328px; font-family:Arial; align-content:center; padding-left:5%; padding-right:5%;">
+                            <br />
+                            <br />
+                            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10" style="height:160px;  background-color:#808080">
+                        <div class="footerPane" style="font-family:Arial; text-align:center; padding: 5px 5px 5px 5px;">
+                            <h2>FOOTER</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
